@@ -1,0 +1,22 @@
+<!-- Views/Marks/Index.cshtml -->
+@model IEnumerable<UniversityMarks.Models.Mark>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student</th>
+            <th>Subject</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var mark in Model)
+        {
+            <tr>
+                <td>@mark.Student.Name</td>
+                <td>@mark.Subject.Name</td>
+                <td>@mark.Score</td>
+            </tr>
+        }
+    </tbody>
+</table>
